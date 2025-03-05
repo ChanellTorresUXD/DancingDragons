@@ -1,0 +1,90 @@
+
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chanell's Dancing Dragons Shop</title>
+</head>
+
+<style>
+     body {
+      /* background-image: url('https://files.oaiusercontent.com/file-29MP13WeWNtZQyE61ca9iG?se=2025-02-28T18%3A48%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2a6ab598-87e0-45a6-8e87-24bc3904de4b.webp&sig=Y1Ir%2BDyKm3sJkMdrAIP6Co%2BofPVO1IC92pl7/jZg3mg%3D'); */
+      background-image: url("/media/images/Dragon_Background.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Castellar', sans-serif;
+        }
+
+    h1 {
+        font-family: 'Castellar', serif;
+    }
+
+    p {
+        font-family: 'Castellar', sans-serif;
+    }
+
+    h1 {
+        font-family: 'Castellar', serif;
+        font-size: 100px;
+    }
+
+    p {
+        font-family: 'HGMaruGothicMPRO', sans-serif;
+        font-size: 35px;
+    }
+</style>
+
+<body>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">Shop Dancing Dragons</a>
+    </div>
+</nav>
+
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/customer">Customers List</a>
+    </div>
+</nav>
+
+<!--
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/dprojectapp/update">Update Customer Info</a>
+    </div>
+</nav>
+-->
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/add">New Customer</a>
+    </div>
+</nav>
+
+<style>
+   
+
+        h1 {
+            color: rgb(192, 190, 190);
+            text-align: center;
+            font-size: 100px;
+            text-shadow: 0 0 5px #7d919b, 0 0 10px #7d919b, 0 0 15px #7d919b, 0 0 20px #7d919b;
+        }
+
+        p {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <body>
+
+<div class="container"></div>
+    {% block content %}
+    {% endblock %}
+</div>
+</div>
+</body>
+</html>
