@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Products</h1>
+<!--
+<style>
+    .cardsDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+</style>
+-->
+<style>
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+
+.flex-container > div {
+  background-color: #8ea7a2b2;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  border: 1px solid #ffffff;
+}
+</style>
+
+<div class="flex-container">
+    {% for product in products %}
+    <div class="card" style="width: 27rem;">
+<!--        <img class="card-img-top" src="{{ product.image_url }}" alt="Card image cap" Style="width:125%"> 
+{% load static %}
+<img src="{% static 'images/image.jpg' %}" alt="My Image">
+    -->
+        <img class="card-img-top" src="{{ product.image_url }}" alt="Card image cap" Style="width:400px;height:400px;">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">${{ product.price }}</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+     {% endfor %}
+</div>
+
+
+{% endblock %}
