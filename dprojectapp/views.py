@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -17,12 +18,15 @@ from .models import Customer
 
 def index(request):
     products = Product.objects.all()
-    return render(request, 'index.html', {'products': products})
+    return render(request, 'index.html', {
+        'products': products,
+        'media_url': settings.MEDIA_URL
+    })
 
 
 def add(request):
   template = loader.get_template('add.html')
-  return HttpResponse(template.render({}, request))
+  return render(request, 'add.html', {'media_url': settings.MEDIA_URL})
 
 
 def addrecord(request):
@@ -72,7 +76,10 @@ def updaterecord(request, id):
 
 def cust(request):
   customers = Customer.objects.all()
-  return render(request, 'customers.html', {'customers': customers})
+  return render(request, 'customers.html', {
+        'customers': customers,
+        'media_url': settings.MEDIA_URL
+    })
 
 
 '''

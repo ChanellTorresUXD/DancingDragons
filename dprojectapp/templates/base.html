@@ -1,9 +1,4 @@
-
-
 {% load static %}
-
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,17 +11,14 @@
 
      body {
       /* background-image: url('https://files.oaiusercontent.com/file-29MP13WeWNtZQyE61ca9iG?se=2025-02-28T18%3A48%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2a6ab598-87e0-45a6-8e87-24bc3904de4b.webp&sig=Y1Ir%2BDyKm3sJkMdrAIP6Co%2BofPVO1IC92pl7/jZg3mg%3D'); */
-      background-image: url("/media/images/Dragon_Background.png");
+      background-image: url("{{ media_url }}images/Dragon_Background.png");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
       color: white;
       font-family: 'Castellar', sans-serif;
         }
-
-    body {
-        font-family: 'Castellar', sans-serif;
-    }
+    
 
 
     h1 {
@@ -76,14 +68,7 @@
 
 <style>
 
-    body {
-      /* background-image: url('https://files.oaiusercontent.com/file-29MP13WeWNtZQyE61ca9iG?se=2025-02-28T18%3A48%3A17Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2a6ab598-87e0-45a6-8e87-24bc3904de4b.webp&sig=Y1Ir%2BDyKm3sJkMdrAIP6Co%2BofPVO1IC92pl7/jZg3mg%3D'); */
-      background-image: url('media/images/Dragon_Background.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      color: white;
-        }
+    
 
         h1 {
             color: rgb(192, 190, 190);
